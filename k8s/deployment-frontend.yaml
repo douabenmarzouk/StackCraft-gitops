@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-image: doua82400/job-app-frontend:latest
+        image: doua82400/job-app-frontend:latest
         ports:
         - containerPort: 80
         env:
