@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/douabenmarzouk/StackCraft.git'
+    repoURL:  'https://github.com/douabenmarzouk/StackCraft-gitops.git'
     targetRevision: main
     path: k8s
   destination:
@@ -18,3 +18,4 @@ spec:
     automated:
       selfHeal: true
       prune: true
+
