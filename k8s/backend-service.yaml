@@ -8,6 +8,6 @@ spec:
     app: job-app-backend
   ports:
     - protocol: TCP
-      port: 5001       # Port que le frontend utilise
-      targetPort: 5002 # Port sur lequel le pod backend écoute
+      port: 5002         # port que le frontend utilise
+      targetPort: 5002   # port réel du pod backend
   type: ClusterIP
