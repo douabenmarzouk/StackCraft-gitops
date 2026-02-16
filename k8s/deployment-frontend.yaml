@@ -16,15 +16,17 @@ spec:
       containers:
         - name: frontend
           image: doua82400/job-app-frontend:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
+              protocol: TCP
           env:
             - name: REACT_APP_BACKEND_URL
-              value: "http://mern.local/api"  # <-- utilisation de l'Ingress pour le backend
+              value: http://mern.local/api
           resources:
             requests:
-              memory: "64Mi"
-              cpu: "50m"
+              memory: 64Mi
+              cpu: 50m
             limits:
-              memory: "128Mi"
-              cpu: "100m"
+              memory: 128Mi
+              cpu: 100m
