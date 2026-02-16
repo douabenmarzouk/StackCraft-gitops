@@ -9,6 +9,6 @@ spec:
     app: job-app-frontend
   ports:
     - protocol: TCP
-      port: 80          # Port exposé par le service
-      targetPort: 80    # ⚡ DOIT correspondre au port du pod
-      nodePort: 31216   # Tu peux garder le même NodePort
+      port: 80
+      targetPort: 80
+      nodePort: 31216
