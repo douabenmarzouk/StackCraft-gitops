@@ -22,7 +22,7 @@ spec:
               protocol: TCP
           env:
             - name: REACT_APP_BACKEND_URL
-              value: http://mern.local/api
+              value: "http://127.0.0.1/api"
           resources:
             requests:
               memory: 64Mi
