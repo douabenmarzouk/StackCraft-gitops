@@ -11,4 +11,4 @@ spec:
       port: 5002
       targetPort: 5002
       nodePort: 32002   # NodePort accessible depuis l’extérieur
-  type: NodePort
+  type: ClusterIP
