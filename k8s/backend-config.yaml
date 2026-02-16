@@ -4,6 +4,6 @@ metadata:
   name: backend-config
   namespace: mern-app
 data:
-  PORT: "5001"
+  PORT: "5002"
   NODE_ENV: "development"
 
