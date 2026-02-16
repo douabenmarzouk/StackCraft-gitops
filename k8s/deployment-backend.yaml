@@ -2,7 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: job-app-backend
+  namespace: mern-app
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: job-app-backend
