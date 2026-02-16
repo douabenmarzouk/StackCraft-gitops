@@ -4,7 +4,7 @@ metadata:
   name: frontend-service
   namespace: mern-app
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: job-app-frontend
   ports:
