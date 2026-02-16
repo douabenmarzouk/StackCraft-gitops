@@ -8,6 +8,7 @@ spec:
     app: job-app-backend
   ports:
     - protocol: TCP
-      port: 5002         # port que le frontend utilise
-      targetPort: 5002   # port réel du pod backend
-  type: ClusterIP
+      port: 5002
+      targetPort: 5002
+      nodePort: 32002   # NodePort accessible depuis l’extérieur
+  type: NodePort
