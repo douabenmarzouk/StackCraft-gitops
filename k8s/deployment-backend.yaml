@@ -2,9 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: job-app-backend
-  namespace: mern-app
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: job-app-backend
@@ -15,7 +13,7 @@ spec:
     spec:
       containers:
         - name: backend
-image: doua82400/job-app-backend:latest
+          image: doua82400/job-app-backend:latest
           ports:
             - containerPort: 5002
           env:
@@ -34,6 +32,16 @@ image: doua82400/job-app-backend:latest
                 secretKeyRef:
                   name: mongo-secret
                   key: MONGO_URL
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secrets
+                  key: JWT_SECRET
+            - name: MISTRAL_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secrets
+                  key: MISTRAL_API_KEY
           resources:
             requests:
               memory: "64Mi"
