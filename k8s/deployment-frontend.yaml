@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-image: doua82400/job-app-frontend:latest
+          image: doua82400/job-app-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
